@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiroshi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Gris claro */
+            color: #374151; /* Gris oscuro */
+        }
+        /* Estilos personalizados para el botón de publicación */
+        .publish-button {
+            background-color: #10B981; /* Verde esmeralda */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .publish-button:hover {
+            background-color: #059669; /* Verde esmeralda más oscuro al pasar el ratón */
+        }
+        /* Estilos para el formulario de publicación */
+        .publish-form {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .publish-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #4B5563;
+        }
+        .publish-form input[type="text"],
+        .publish-form input[type="url"],
+        .publish-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #D1D5DB;
+            border-radius: 0.375rem;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: #374151;
+            background-color: #F9FAFB;
+        }
+        .publish-form button[type="submit"] {
+            background-color: #2563EB; /* Azul */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .publish-form button[type="submit"]:hover {
+            background-color: #1D4ED8; /* Azul más oscuro */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <nav class="bg-gradient-to-r from-blue-600 to-purple-600 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white text-2xl font-bold rounded-md px-3 py-1 hover:bg-white hover:text-blue-600 transition-all duration-300">OpenUTAU Voicebanks</a>
+            <div class="flex space-x-4">
+                <button class="nav-link text-white hover:text-blue-200 transition-colors duration-300 font-medium py-2 px-4 rounded-md" data-target="inicio">Inicio</button>
+                <button class="nav-link text-white hover:text-blue-200 transition-colors duration-300 font-medium py-2 px-4 rounded-md" data-target="descargas">Descargas</button>
+                <button class="nav-link text-white hover:text-blue-200 transition-colors duration-300 font-medium py-2 px-4 rounded-md" data-target="contactanos">Contáctanos</button>
+                <button class="nav-link text-white hover:text-blue-200 transition-colors duration-300 font-medium py-2 px-4 rounded-md" data-target="sobre-mi">Sobre mí</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow container mx-auto p-6">
+
+        <section id="inicio" class="page-section active bg-white p-8 rounded-lg shadow-xl mb-8">
+            <h1 class="text-4xl font-extrabold text-center text-blue-700 mb-6">Bienvenido a la Comunidad de Voicebanks OpenUTAU</h1>
+            <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                Explora y descarga voicebanks de OpenUTAU diseñados para emular la calidad y expresividad de VOCALOID4. Aquí encontrarás una colección de voces impresionantes creadas por talentosos artistas de la comunidad.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                OpenUTAU es una potente herramienta de síntesis de voz que permite a los creadores dar vida a sus composiciones musicales con voces personalizadas. Nuestra misión es fomentar la creación y el intercambio de voicebanks de alta calidad.
+            </p>
+            <div class="mt-8 text-center">
+                <img src="https://placehold.co/600x300/A78BFA/FFFFFF?text=Imagen+de+OpenUTAU" alt="Imagen de OpenUTAU" class="mx-auto rounded-lg shadow-md max-w-full h-auto">
+            </div>
+        </section>
+
+        <section id="descargas" class="page-section hidden bg-white p-8 rounded-lg shadow-xl mb-8">
+            <h2 class="text-3xl font-bold text-center text-blue-700 mb-6">Descarga Voicebanks OpenUTAU</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                Aquí podrás encontrar una variedad de voicebanks disponibles para descargar. Cada voicebank está diseñado para ofrecer una experiencia de sonido rica y expresiva, similar a la de VOCALOID4.
+            </p>
+
+            <div class="text-center mb-8">
+                <button id="showPublishForm" class="publish-button">Publicar un Voicebank (Solo Creadores)</button>
+                <p class="text-sm text-gray-500 mt-2">
+                    Esta función es exclusiva para los creadores de la página. Para publicar, por favor, contacta con nosotros.
+                </p>
+            </div>
+
+            <div id="publishForm" class="publish-form hidden">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Formulario de Publicación de Voicebank</h3>
+                <form onsubmit="handlePublishSubmit(event)">
+                    <label for="voicebankName">Nombre del Voicebank:</label>
+                    <input type="text" id="voicebankName" name="voicebankName" placeholder="Ej: Luna V4" required>
+
+                    <label for="creatorName">Nombre del Creador:</label>
+                    <input type="text" id="creatorName" name="creatorName" placeholder="Ej: Tu Nombre / Alias" required>
+
+                    <label for="downloadLink">Enlace de Descarga:</label>
+                    <input type="url" id="downloadLink" name="downloadLink" placeholder="Ej: https://ejemplo.com/voicebank.zip" required>
+
+                    <label for="demoLink">Enlace de Demostración (YouTube/SoundCloud):</label>
+                    <input type="url" id="demoLink" name="demoLink" placeholder="Ej: https://youtube.com/watch?v=..." required>
+
+                    <label for="description">Descripción:</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Describe tu voicebank, sus características y uso." required></textarea>
+
+                    <button type="submit">Enviar para Publicación</button>
+                </form>
+                <p id="publishMessage" class="text-sm text-green-600 mt-4 hidden"></p>
+            </div>
+
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Hiroshi v4x</h3>
+                    <p class="text-gray-600 text-sm mb-3">Creador: Hiroshi</p>
+                    <p class="text-gray-700 mb-4">Un voicebank en japonés con una dicción clara y un rango vocal amplio, ideal para géneros diversos. Sonido profesional.</p>
+                    <a href="https://huggingface.co/hiroshi234elmejor/Hiroshi-UTAU/resolve/main/%E3%83%92%E3%83%AD%E3%82%B7%20v4x.zip" target="_blank" class="block text-center bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors duration-300 mb-2">Descargar</a>
+                    <a href="https://youtu.be/ocr3uqlHKQY?si=-xaK-50ggSmJP7Qo" target="_blank" class="block text-center bg-purple-500 text-white py-2 px-4 rounded-md hover:bg-purple-600 transition-colors duration-300">Ver Demostración</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contactanos" class="page-section hidden bg-white p-8 rounded-lg shadow-xl mb-8">
+            <h2 class="text-3xl font-bold text-center text-blue-700 mb-6">Contáctanos</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                ¿Tienes preguntas, sugerencias o quieres publicar tu propio voicebank? ¡Nos encantaría saber de ti!
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                Puedes enviarnos un correo electrónico directamente a la siguiente dirección:
+            </p>
+            <div class="text-center">
+                <a href="mailto:alejandrotocaboca2915@gmail.com" class="inline-block bg-green-500 text-white text-xl font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-green-600 transition-colors duration-300">
+                    Enviar Correo a alejandrotocaboca2915@gmail.com
+                </a>
+            </div>
+            <div class="mt-8 text-center">
+                <img src="https://placehold.co/600x300/60A5FA/FFFFFF?text=Imagen+de+Contacto" alt="Imagen de Contacto" class="mx-auto rounded-lg shadow-md max-w-full h-auto">
+            </div>
+        </section>
+
+        <section id="sobre-mi" class="page-section hidden bg-white p-8 rounded-lg shadow-xl mb-8">
+            <h2 class="text-3xl font-bold text-center text-blue-700 mb-6">Sobre mí</h2>
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                <div class="flex-shrink-0">
+                    <img src="https://ibb.co/HTBNcMrd" alt="Tu Foto de Perfil" class="rounded-full w-48 h-48 object-cover shadow-lg border-4 border-yellow-400">
+                </div>
+                <div class="flex-grow text-center md:text-left">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        ¡Hola! Soy Alejandro Abenza Ríos, un entusiasta de la síntesis de voz y un apasionado por la creación de música con herramientas como OpenUTAU. Mi objetivo con esta página es crear un espacio donde la comunidad pueda compartir y descubrir voicebanks de alta calidad que capturen la esencia de los sonidos de VOCALOID4.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        Siempre estoy explorando nuevas técnicas y colaborando con otros artistas para llevar la calidad de los voicebanks a un nuevo nivel. Si compartes esta pasión, ¡no dudes en contactarme!
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Me encanta experimentar con diferentes idiomas y estilos musicales, y creo firmemente en el poder de la comunidad para impulsar la innovación en el mundo de la síntesis de voz.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white p-6 text-center mt-auto">
+        <p>&copy; 2025 Voicebanks OpenUTAU. Todos los derechos reservados.</p>
+        <p class="text-sm mt-2">Diseñado con <span class="text-red-500">&hearts;</span> para la comunidad OpenUTAU.</p>
+    </footer>
+
+    <script>
+        // Función para mostrar la sección activa y ocultar las demás
+        function showSection(targetId) {
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.add('hidden');
+                section.classList.remove('active');
+            });
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.classList.remove('hidden');
+                targetSection.classList.add('active');
+            }
+        }
+
+        // Event listeners para los botones de navegación
+        document.querySelectorAll('.nav-link').forEach(button => {
+            button.addEventListener('click', (event) => {
+                const targetId = event.target.dataset.target;
+                showSection(targetId);
+            });
+        });
+
+        // Mostrar la sección de Inicio por defecto al cargar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('inicio');
+        });
+
+        // Lógica para mostrar/ocultar el formulario de publicación
+        document.getElementById('showPublishForm').addEventListener('click', () => {
+            const publishForm = document.getElementById('publishForm');
+            publishForm.classList.toggle('hidden');
+        });
+
+        // Manejar el envío del formulario de publicación
+        function handlePublishSubmit(event) {
+            event.preventDefault(); // Evita el envío real del formulario
+            const publishMessage = document.getElementById('publishMessage');
+            publishMessage.textContent = '¡Gracias! Tu voicebank ha sido enviado para revisión. Nos pondremos en contacto contigo pronto.';
+            publishMessage.classList.remove('hidden');
+            // Aquí iría la lógica real para enviar los datos (por ejemplo, a un servidor)
+            // Por ahora, solo mostramos un mensaje de éxito.
+            event.target.reset(); // Limpia el formulario
+            setTimeout(() => {
+                publishMessage.classList.add('hidden');
+                document.getElementById('publishForm').classList.add('hidden'); // Oculta el formulario después de un tiempo
+            }, 5000); // Oculta el mensaje después de 5 segundos
+        }
+    </script>
+</body>
+</html>
