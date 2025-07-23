@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de - Hiroshi AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-800 via-indigo-900 to-blue-900 text-gray-100 min-h-screen flex flex-col">
+    <!-- Barra de Navegación (repetida para consistencia) -->
+    <nav class="bg-gray-900 bg-opacity-70 backdrop-blur-sm p-4 shadow-lg rounded-b-xl">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-teal-400 mb-2 md:mb-0">
+                Hiroshi AI
+            </a>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="index.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Inicio</a>
+                <a href="about.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Acerca de</a>
+                <a href="demos.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Demos</a>
+                <a href="download.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Descarga</a>
+                <a href="terms.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Términos de Uso</a>
+                <a href="contact.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal - Sección Acerca de -->
+    <main class="flex-grow container mx-auto p-6 md:p-10">
+        <div class="bg-gray-800 bg-opacity-60 p-8 md:p-12 rounded-2xl shadow-xl border border-teal-600">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-purple-300 mb-8 text-center">
+                Acerca de Hiroshi AI
+            </h1>
+
+            <div class="flex flex-col lg:flex-row items-center gap-8 mb-12">
+                <div class="lg:w-1/3 flex justify-center">
+                    <img src="https://placehold.co/300x300/6D28D9/FFFFFF?text=Hiroshi+AI" alt="Retrato de [Nombre del Voicebank]" class="w-full max-w-xs rounded-full shadow-lg border-4 border-purple-400">
+                </div>
+                <div class="lg:w-2/3 text-lg text-gray-200">
+                    <p class="mb-4">
+                        Hiroshi AI es un voicebank UTAU versátil y expresivo, creado por Hiroshi con el objetivo de ofrecer una voz fresca y distintiva a la comunidad. Su desarrollo se centró en la claridad, la entonación natural y la capacidad de adaptarse a diversos géneros musicales.
+                    </p>
+                    <p>
+                        Desde baladas emotivas hasta ritmos enérgicos, Hiroshi AI ha sido afinado meticulosamente para proporcionar una experiencia de canto fluida y convincente. ¡Esperamos que disfrutes creando con él tanto como nosotros disfrutamos creándolo!
+                    </p>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold text-teal-400 mb-6 text-center">
+                Perfil del Personaje
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-lg text-gray-200">
+                <div class="bg-gray-700 bg-opacity-50 p-6 rounded-xl shadow-md border border-gray-600">
+                    <h3 class="text-xl font-semibold text-teal-300 mb-2">Nombre Completo:</h3>
+                    <p>Hiroshi AI</p>
+                </div>
+                <div class="bg-gray-700 bg-opacity-50 p-6 rounded-xl shadow-md border border-gray-600">
+                    <h3 class="text-xl font-semibold text-teal-300 mb-2">Edad:</h3>
+                    <p>16</p>
+                </div>
+                <div class="bg-gray-700 bg-opacity-50 p-6 rounded-xl shadow-md border border-gray-600">
+                    <h3 class="text-xl font-semibold text-teal-300 mb-2">Género:</h3>
+                    <p>Masculino</p>
+                </div>
+                <div class="bg-gray-700 bg-opacity-50 p-6 rounded-xl shadow-md border border-gray-600">
+                    <h3 class="text-xl font-semibold text-teal-300 mb-2">Altura:</h3>
+                    <p>??</p>
+                </div>
+                <div class="bg-gray-700 bg-opacity-50 p-6 rounded-xl shadow-md border border-gray-600">
+                    <h3 class="text-xl font-semibold text-teal-300 mb-2">Peso:</h3>
+                    <p>??</p>
+                </div>
+                <div class="bg-gray-700 bg-opacity-50 p-6 rounded-xl shadow-md border border-gray-600">
+                    <h3 class="text-xl font-semibold text-teal-300 mb-2">Personalidad:</h3>
+                    <p>Es un poco tímido, pero amistoso.</p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="contact.html" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    ¿Tienes preguntas? ¡Contáctanos!
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="bg-gray-900 bg-opacity-70 backdrop-blur-sm p-6 text-center text-gray-400 rounded-t-xl mt-8">
+        <p>&copy; 2024 Hiroshi. Todos los derechos reservados.</p>
+        <p>Diseñado con pasión para la comunidad UTAU.</p>
+    </footer>
+</body>
+</html>
