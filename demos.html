@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demos - Hiroshi AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-800 via-indigo-900 to-blue-900 text-gray-100 min-h-screen flex flex-col">
+    <!-- Barra de Navegación (repetida para consistencia) -->
+    <nav class="bg-gray-900 bg-opacity-70 backdrop-blur-sm p-4 shadow-lg rounded-b-xl">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-teal-400 mb-2 md:mb-0">
+                Hiroshi AI 
+            </a>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="index.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Inicio</a>
+                <a href="about.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Acerca de</a>
+                <a href="demos.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Demos</a>
+                <a href="download.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Descarga</a>
+                <a href="terms.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Términos de Uso</a>
+                <a href="contact.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal - Sección Demos -->
+    <main class="flex-grow container mx-auto p-6 md:p-10">
+        <div class="bg-gray-800 bg-opacity-60 p-8 md:p-12 rounded-2xl shadow-xl border border-purple-600">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-teal-300 mb-8 text-center">
+                Demos de Hiroshi AI
+            </h1>
+            <p class="text-xl text-gray-200 text-center mb-12">
+                Escucha la versatilidad y el rango emocional de [Nombre del Voicebank] en estas demostraciones.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Demo 1 -->
+                <div class="bg-gray-700 bg-opacity-50 p-6 rounded-xl shadow-lg border border-gray-600 flex flex-col items-center">
+                    <h2 class="text-2xl font-semibold text-purple-300 mb-4 text-center">ずんだもんだわんだーらんど</h2>
+                    <p class="text-gray-300 mb-4 text-center">Una pieza suave que muestra la capacidad de Hiroshi AI para transmitir emociones profundas.</p>
+                    <!-- Reproductor de audio de ejemplo. Reemplaza 'audio/demo1.mp3' con tu archivo real. -->
+                    <audio controls class="w-full max-w-sm rounded-lg shadow-md bg-gray-900 p-2">
+                        <source src="https://ia601003.us.archive.org/0/items/20250722_20250722_2042/%E3%81%9A%E3%82%93%E3%81%A0%E3%82%82%E3%82%93%E3%81%A0%E3%82%8F%E3%82%93%E3%81%A0%E3%83%BC%E3%82%89%E3%82%93%E3%81%A9.wav" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                    <p class="text-sm text-gray-400 mt-2">Música de fondo por マスティ</p>
+                </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-xl text-gray-200 mb-6">
+                    ¿Te gusta lo que escuchas? ¡Descarga ] y crea tu propia música!
+                </p>
+                <a href="download.html" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    Ir a la Descarga
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="bg-gray-900 bg-opacity-70 backdrop-blur-sm p-6 text-center text-gray-400 rounded-t-xl mt-8">
+        <p>&copy; 2024 [Tu Nombre/Nombre del Creador]. Todos los derechos reservados.</p>
+        <p>Diseñado con pasión para la comunidad UTAU.</p>
+    </footer>
+</body>
+</html>
