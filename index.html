@@ -3,170 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Covers VOCALOID - Hiroshi</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Voicebank UTAU - Hiroshi AI</title>
+    <!-- Enlace al CDN de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Configuración de Tailwind para usar la fuente Inter -->
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #FCE4EC; /* Light Pink Background */
-        }
-        .section-header {
-            background-color: #F8BBD0; /* Slightly darker pink for headers */
-            color: #880E4F; /* Darker pink for text */
-        }
-        .card {
-            background-color: #FFF8F9; /* Very light pink/off-white for cards */
-            border: 1px solid #F48FB1; /* Pink border for cards */
-        }
-        .btn-primary {
-            background-color: #E91E63; /* Bright pink for buttons */
-            color: #FFFFFF;
-        }
-        .btn-primary:hover {
-            background-color: #C2185B; /* Darker pink on hover */
-        }
-        .nav-link:hover {
-            color: #E91E63; /* Pink on hover for nav links */
         }
     </style>
 </head>
-<body class="text-gray-800">
-
-    <!-- Navigation Bar -->
-    <nav class="bg-pink-300 p-4 shadow-md sticky top-0 z-50">
+<body class="bg-gradient-to-br from-purple-800 via-indigo-900 to-blue-900 text-gray-100 min-h-screen flex flex-col">
+    <!-- Barra de Navegación -->
+    <nav class="bg-gray-900 bg-opacity-70 backdrop-blur-sm p-4 shadow-lg rounded-b-xl">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-            <a href="#" class="text-white text-2xl font-bold mb-2 md:mb-0">Mi Mundo VOCALOID</a>
+            <a href="index.html" class="text-3xl font-bold text-teal-400 mb-2 md:mb-0">
+                Hiroshi AI
+            </a>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="#inicio" class="nav-link text-white hover:text-pink-700 transition-colors duration-300 rounded-md px-3 py-2">Inicio</a>
-                <a href="#usame" class="nav-link text-white hover:text-pink-700 transition-colors duration-300 rounded-md px-3 py-2">¡Úsame para tus canciones!</a>
-                <a href="#covers" class="nav-link text-white hover:text-pink-700 transition-colors duration-300 rounded-md px-3 py-2">Mis Covers</a>
-                <a href="#contacto" class="nav-link text-white hover:text-pink-700 transition-colors duration-300 rounded-md px-3 py-2">Contáctame</a>
-                <a href="#sobre-mi" class="nav-link text-white hover:text-pink-700 transition-colors duration-300 rounded-md px-3 py-2">Sobre Mí</a>
+                <a href="index.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Inicio</a>
+                <a href="about.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Acerca de</a>
+                <a href="demos.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Demos</a>
+                <a href="download.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Descarga</a>
+                <a href="terms.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Términos de Uso</a>
+                <a href="contact.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Contacto</a>
             </div>
         </div>
     </nav>
 
-    <main class="container mx-auto p-6 space-y-12">
-
-        <!-- Inicio Section -->
-        <section id="inicio" class="section-header rounded-lg shadow-lg p-8 text-center">
-            <h1 class="text-4xl font-bold mb-4">¡Bienvenido a mi espacio de Covers VOCALOID!</h1>
-            <p class="text-lg leading-relaxed">
-                Aquí encontrarás mis interpretaciones de canciones usando VOCALOID, SynthV, VoiSona y otras herramientas de síntesis de canto. ¡Espero que disfrutes de la música!
-            </p>
-            <div class="mt-6">
-                <img src="https://placehold.co/600x300/F8BBD0/880E4F?text=VOCALOID+Banner" alt="Banner de bienvenida VOCALOID" class="rounded-lg shadow-md mx-auto max-w-full h-auto">
-            </div>
-        </section>
-
-        <!-- ¡Úsame para tus canciones! Section -->
-        <section id="usame" class="section-header rounded-lg shadow-lg p-8 text-center">
-            <h2 class="text-3xl font-bold mb-6">¡Úsame para tus canciones!</h2>
-            <div class="card p-6 rounded-lg shadow-md max-w-2xl mx-auto">
-                <h3 class="text-2xl font-semibold mb-4 text-pink-700">Mi Voicebank de UTAU para OpenUTAU está Disponible</h3>
-                <p class="text-lg mb-4 leading-relaxed">
-                    ¡Ahora puedes usar mi voz en tus propias composiciones o covers con OpenUTAU! He creado un voicebank de UTAU con mi propia voz, utilizando grabaciones sintéticas.
-                </p>
-                <p class="text-lg mb-6 leading-relaxed">
-                    Este voicebank está configurado con `singer_type: ai` para una integración óptima en OpenUTAU. ¡Me encantaría escuchar lo que creas con él!
-                </p>
-                <a href="https://huggingface.co/hiroshi234elmejor/Hiroshi-AI-UTAU/resolve/main/%E3%83%92%E3%83%AD%E3%82%B7AI.zip" target="_blank" class="btn-primary inline-block px-8 py-3 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300">
-                    Descarga Mi Voicebank de UTAU
+    <!-- Contenido Principal - Sección de Inicio -->
+    <main class="flex-grow container mx-auto p-6 md:p-10 flex flex-col lg:flex-row items-center justify-center gap-8">
+        <!-- Columna de Texto -->
+        <div class="lg:w-1/2 text-center lg:text-left bg-gray-800 bg-opacity-60 p-8 rounded-2xl shadow-xl border border-purple-600">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-teal-400 mb-6 leading-tight">
+                ¡Bienvenido a la Página Oficial de <span class="block text-purple-300">Hiroshi AI</span>!
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-8">
+                Descubre la voz única de Hiroshi AI, un voicebank UTAU diseñado para dar vida a tus composiciones musicales. 
+            <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                <a href="demos.html" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    Escucha Demos
+                </a>
+                <a href="download.html" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    Descargar Ahora
                 </a>
             </div>
-            <div class="mt-8">
-                <img src="https://placehold.co/400x200/F8BBD0/880E4F?text=UTAU+Voicebank" alt="Imagen representativa de UTAU Voicebank" class="rounded-lg shadow-md mx-auto max-w-full h-auto">
-            </div>
-        </section>
+        </div>
 
-        <!-- Mis Covers Section -->
-        <section id="covers" class="section-header rounded-lg shadow-lg p-8">
-            <h2 class="text-3xl font-bold mb-6 text-center">Mis Covers</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Cover 1 -->
-                <div class="card rounded-lg shadow-md p-6">
-                    <img src="https://placehold.co/400x225/F48FB1/FFFFFF?text=Cover+1" alt="Miniatura del Cover 1" class="rounded-lg mb-4 w-full h-auto">
-                    <h3 class="text-xl font-semibold mb-2 text-pink-700">Título de la Canción 1</h3>
-                    <p class="text-gray-700 mb-4">
-                        Una interpretación emotiva de esta popular canción de VOCALOID. Usando [Nombre del programa de síntesis].
-                    </p>
-                    <a href="https://www.youtube.com/watch?v=yourvideoid1" target="_blank" class="btn-primary inline-block px-6 py-2 rounded-full font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-300">
-                        Escuchar en YouTube
-                    </a>
-                </div>
-
-                <!-- Cover 2 -->
-                <div class="card rounded-lg shadow-md p-6">
-                    <img src="https://placehold.co/400x225/F48FB1/FFFFFF?text=Cover+2" alt="Miniatura del Cover 2" class="rounded-lg mb-4 w-full h-auto">
-                    <h3 class="text-xl font-semibold mb-2 text-pink-700">Título de la Canción 2</h3>
-                    <p class="text-gray-700 mb-4">
-                        Un cover enérgico con un toque personal. Grabado con [Nombre del programa de síntesis].
-                    </p>
-                    <a href="https://www.youtube.com/watch?v=yourvideoid2" target="_blank" class="btn-primary inline-block px-6 py-2 rounded-full font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-300">
-                        Escuchar en YouTube
-                    </a>
-                </div>
-
-                <!-- Cover 3 -->
-                <div class="card rounded-lg shadow-md p-6">
-                    <img src="https://placehold.co/400x225/F48FB1/FFFFFF?text=Cover+3" alt="Miniatura del Cover 3" class="rounded-lg mb-4 w-full h-auto">
-                    <h3 class="text-xl font-semibold mb-2 text-pink-700">Título de la Canción 3</h3>
-                    <p class="text-gray-700 mb-4">
-                        Explorando nuevos géneros con esta melodía. Voz principal: [Nombre del VOCALOID/SynthV].
-                    </p>
-                    <a href="https://www.youtube.com/watch?v=yourvideoid3" target="_blank" class="btn-primary inline-block px-6 py-2 rounded-full font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-300">
-                        Escuchar en YouTube
-                    </a>
-                </div>
-
-                <!-- Add more covers as needed -->
-            </div>
-        </section>
-
-        <!-- Contáctame Section -->
-        <section id="contacto" class="section-header rounded-lg shadow-lg p-8 text-center">
-            <h2 class="text-3xl font-bold mb-6">Contáctame</h2>
-            <div class="card p-6 rounded-lg shadow-md max-w-xl mx-auto">
-                <p class="text-lg mb-4 leading-relaxed">
-                    ¿Tienes alguna pregunta, sugerencia o quieres colaborar? ¡No dudes en contactarme!
-                </p>
-                <ul class="space-y-3 text-lg">
-                    <li><strong>Email:</strong> <a href="mailto:alejandrotocaboca2015@gmail.com" class="text-pink-600 hover:underline">alejandrotocaboca2015@gmail.com</a></li>
-                    <li><strong>Redes Sociales:</strong></li>
-                    <li class="flex justify-center gap-4 mt-2">
-                        <a href="https://www.youtube.com/@SoyHiroshi234" target="_blank" class="text-pink-600 hover:text-pink-800 transition-colors duration-300">
-                            <!-- YouTube Icon -->
-                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.615 3.184c-1.077-.29-4.22-.387-9.615-.387S5.462 2.894 4.385 3.184C3.31 3.475 2.5 4.285 2.209 5.362c-.29 1.077-.387 4.22-.387 9.615s.097 8.538.387 9.615c.29 1.077 1.1 1.887 2.209 2.178 1.077.29 4.22.387 9.615.387s8.538-.097 9.615-.387c1.077-.29 1.887-1.1 2.178-2.209.29-1.077.387-4.22.387-9.615s-.097-8.538-.387-9.615c-.29-1.077-1.1-1.887-2.209-2.178zM9.999 15.31V8.69L15.68 12l-5.681 3.31z"></path></svg>
-                        </a>
-                        <!-- Add more social media links as needed -->
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Sobre Mí Section -->
-        <section id="sobre-mi" class="section-header rounded-lg shadow-lg p-8 text-center">
-            <h2 class="text-3xl font-bold mb-6">Sobre Mí</h2>
-            <div class="card p-6 rounded-lg shadow-md max-w-2xl mx-auto">
-                <img src="https://placehold.co/150x150/F8BBD0/880E4F?text=Tu+Foto" alt="Tu foto de perfil" class="rounded-full mx-auto mb-4 w-32 h-32 object-cover border-4 border-pink-400">
-                <p class="text-lg leading-relaxed mb-4">
-                    ¡Hola! Soy Alejandro y soy un apasionado de la síntesis de canto. Desde que descubrí VOCALOID, me he dedicado a explorar las infinitas posibilidades que ofrecen estos programas para crear música.
-                </p>
-                <p class="text-lg leading-relaxed">
-                    Me encanta experimentar con diferentes voces, estilos y géneros, y siempre estoy buscando nuevas formas de dar vida a las canciones. ¡Gracias por visitar mi página y por apoyar mi trabajo!
-                </p>
-            </div>
-        </section>
-
+        <!-- Columna de Imagen del Voicebank -->
+        <div class="lg:w-1/2 flex justify-center items-center">
+            <img src="https://placehold.co/500x500/8B5CF6/FFFFFF?text=Hiroshi+AI"alt="Imagen de [Nombre del Voicebank]" class="w-full max-w-md rounded-full shadow-2xl border-4 border-teal-400 animate-pulse-slow">
+        </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-pink-300 p-6 text-center text-white mt-12 rounded-t-lg shadow-inner">
-        <p>&copy; 2025 [Tu Nombre]. Todos los derechos reservados.</p>
-        <p>Hecho con <span class="text-red-500">&hearts;</span> para la comunidad de síntesis de canto.</p>
+    <!-- Pie de Página -->
+    <footer class="bg-gray-900 bg-opacity-70 backdrop-blur-sm p-6 text-center text-gray-400 rounded-t-xl mt-8">
+        <p>&copy; 2024 Hiroshi. Todos los derechos reservados.</p>
+        <p>Diseñado con pasión para la comunidad UTAU.</p>
     </footer>
 
+    <!-- Animación simple para la imagen (CSS personalizado) -->
+    <style>
+        @keyframes pulse-slow {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(139, 92, 246, 0.7); /* purple-500 */
+            }
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 0 35px rgba(45, 212, 191, 0.9); /* teal-400 */
+            }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 6s infinite ease-in-out;
+        }
+    </style>
 </body>
 </html>
