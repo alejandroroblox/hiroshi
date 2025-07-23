@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descarga - Hiroshi AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-800 via-indigo-900 to-blue-900 text-gray-100 min-h-screen flex flex-col">
+    <!-- Barra de Navegación (repetida para consistencia) -->
+    <nav class="bg-gray-900 bg-opacity-70 backdrop-blur-sm p-4 shadow-lg rounded-b-xl">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-teal-400 mb-2 md:mb-0">
+                Hiroshi AI
+            </a>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="index.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Inicio</a>
+                <a href="about.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Acerca de</a>
+                <a href="demos.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Demos</a>
+                <a href="download.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Descarga</a>
+                <a href="terms.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Términos de Uso</a>
+                <a href="contact.html" class="text-lg font-semibold hover:text-teal-300 transition duration-300 ease-in-out px-3 py-1 rounded-md">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal - Sección Descarga -->
+    <main class="flex-grow container mx-auto p-6 md:p-10">
+        <div class="bg-gray-800 bg-opacity-60 p-8 md:p-12 rounded-2xl shadow-xl border border-teal-600">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-purple-300 mb-8 text-center">
+                Descarga Hiroshi AI
+            </h1>
+            <p class="text-xl text-gray-200 text-center mb-12">
+                ¡Es hora de llevar la voz de [Nombre del Voicebank] a tus proyectos! Asegúrate de leer los <a href="terms.html" class="text-teal-400 hover:underline">Términos de Uso</a> antes de descargar.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Versión Principal del Voicebank -->
+                <div class="bg-gray-700 bg-opacity-50 p-6 rounded-xl shadow-lg border border-gray-600 flex flex-col items-center text-center">
+                    <h2 class="text-2xl font-semibold text-teal-300 mb-4">Voicebank Principal</h2>
+                    <p class="text-gray-300 mb-4">
+                        La versión completa y estándar de Hiroshi AI. Recomendado para la mayoría de los usuarios.
+                    </p>
+                    <p class="text-lg font-bold text-gray-100 mb-6">Tamaño: 5.38 MB</p>
+                    <a href="https://huggingface.co/hiroshi234elmejor/Hiroshi-AI-UTAU/resolve/main/%E3%83%92%E3%83%AD%E3%82%B7AI.zip" download class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                        Descargar Voicebank (.zip)
+                    </a>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold text-teal-400 mb-6 text-center">
+                Instrucciones de Instalación (para OpenUTAU)
+            </h2>
+            <div class="text-lg text-gray-200 space-y-4">
+                <div class="bg-gray-700 bg-opacity-50 p-6 rounded-xl shadow-md border border-gray-600">
+                    <p class="font-semibold text-teal-300 mb-2">Paso 1: Descargar el archivo</p>
+                    <p>Haz clic en el botón de descarga de la versión que desees y guarda el archivo .zip en tu computadora.</p>
+                </div>
+                <div class="bg-gray-700 bg-opacity-50 p-6 rounded-xl shadow-md border border-gray-600">
+                    <p class="font-semibold text-teal-300 mb-2">Paso 2: Descomprimir el archivo</p>
+                    <p>Descomprime el archivo .zip en una ubicación de tu elección. Asegúrate de que la carpeta resultante contenga los archivos del voicebank (como `character.yaml`, `oto.ini`, etc.).</p>
+                </div>
+                <div class="bg-gray-700 bg-opacity-50 p-6 rounded-xl shadow-md border border-gray-600">
+                    <p class="font-semibold text-teal-300 mb-2">Paso 3: Instalar en OpenUTAU</p>
+                    <p>
+                        Abre OpenUTAU. Ve a "Herramientas" (Tools) &gt; "Instalar Cantante" (Install Singer) y selecciona el .zip de [Nombre del Voicebank]. OpenUTAU se encargará del resto.
+                    </p>
+    
+                <div class="bg-gray-700 bg-opacity-50 p-6 rounded-xl shadow-md border border-gray-600">
+                    <p class="font-semibold text-teal-300 mb-2">Paso 4: ¡A Disfrutar!</p>
+                    <p>
+                        Una vez instalado, Hiroshi AI estará disponible en tu lista de voicebanks en OpenUTAU. ¡Empieza a crear!
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-xl text-gray-200 mb-6">
+                    Si tienes algún problema con la descarga o instalación, no dudes en contactarnos:
+                </p>
+                <a href="contact.html" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    Contactar Soporte
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="bg-gray-900 bg-opacity-70 backdrop-blur-sm p-6 text-center text-gray-400 rounded-t-xl mt-8">
+        <p>&copy; 2024 Hiroshi. Todos los derechos reservados.</p>
+        <p>Diseñado con pasión para la comunidad UTAU.</p>
+    </footer>
+</body>
+</html>
